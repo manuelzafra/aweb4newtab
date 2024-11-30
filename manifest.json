@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Random Unsplash with Overlay",
+  "version": "1.0",
+  "description": "Muestra una foto aleatoria de Unsplash con modificaciones personalizadas.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["storage"]
+}

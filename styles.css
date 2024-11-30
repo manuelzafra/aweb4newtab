@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Georgia, serif;  /* Cambiado a Georgia */
+}
+
+#image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    overflow: hidden; /* Evita que elementos se salgan del contenedor */
+}
+
+#background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambia a 'contain' si quieres que la imagen no recorte nada */
+    object-position: center; /* Centra la imagen en caso de que haya espacio sobrante */
+}
+
+/* Overlay en el lado derecho */
+#overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Reducida la opacidad de 0.5 a 0.3 */
+    backdrop-filter: blur(3px); /* Reducido el desenfoque de 5px a 3px */
+    display: flex;
+    align-items: flex-start; /* Cambiado para alinear el contenido a la izquierda */
+    justify-content: flex-start; /* Cambiado para alinear el contenido a la izquierda */
+    color: white;
+}
+
+#overlay p {
+    margin: 0;
+    padding: 20px;
+    font-size: 1.3rem;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    line-height: 1.6;
+    font-family: Georgia, serif; /* Cambiado a Georgia */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste a la línea */
+}
+
+/* Créditos del autor */
+#credits {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 1rem; /* Ajuste del tamaño */
+}
+
+#credits p {
+    margin: 5px 0;
+}
+
+#credits a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#credits a:hover {
+    text-decoration: underline;
+    color: #f1c40f; /* Color destacado al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #overlay {
+        width: 60%; /* Aumenta el overlay para pantallas pequeñas */
+    }
+    #credits {
+        font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas más pequeñas */
+    }
+}
